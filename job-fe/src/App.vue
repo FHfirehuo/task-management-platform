@@ -3,7 +3,7 @@
         <el-container style="height: 100%; border: 1px solid #eee">
             <el-header>
                 <i class="el-icon-edit"/>
-                CRM25 管理系统
+                管理系统
             </el-header>
             <el-container>
                 <el-aside width="200px">
