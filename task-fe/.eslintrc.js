@@ -30,7 +30,8 @@ module.exports = {
     'vue/eqeqeq': 'error',
     'vue/key-spacing': 'error',
     'vue/match-component-file-name': 'error',
-    'vue/object-curly-spacing': 'error'
+    'vue/object-curly-spacing': 'error',
+    "quotes": [1, "double"] //引号类型 `` "" ''
   },
 
   'extends': [

@@ -42,30 +42,29 @@ export default new Router({
       ]
     },
     {
-      path: "/example",
+      path: "/task",
       component: Layout,
-      redirect: "/example/table",
-      name: "example",
-      meta: { title: "用例", icon: "example" },
+      meta: { title: "任务"},
       children: [
         {
-          path: "table",
-          name: "Table",
+          path: "index",
+          name: "taskList",
           component: () =>
-            import(/* webpackChunkName: "table" */ "@/views/table/index.vue"),
-          meta: { title: "列表", icon: "table" }
+            import( "@/views/task/index.vue"),
+          meta: { title: "任务列表", icon: "table" }
         },
         {
-          path: "tree",
-          name: "Tree",
+          path: "add",
+          name: "taskAdd",
           component: () =>
-            import(/* webpackChunkName: "tree" */ "@/views/tree/index.vue"),
-          meta: { title: "树", icon: "tree" }
+            import("@/views/task/Add.vue"),
+          meta: { title: "任务添加", icon: "form" }
         }
       ]
     },
+   
     {
-      path: "/task-add",
+      path: "/form",
       component: Layout,
       children: [
         {
@@ -73,20 +72,7 @@ export default new Router({
           name: "add",
           component: () =>
             import(/* webpackChunkName: "form" */ "@/views/form/index.vue"),
-          meta: { title: "任务添加", icon: "form" }
-        }
-      ]
-    },
-    {
-      path: "/task-list",
-      component: Layout,
-      children: [
-        {
-          path: "index",
-          name: "list",
-          component: () =>
-            import(/* webpackChunkName: "form" */ "@/views/table/index.vue"),
-          meta: { title: "任务列表", icon: "table" }
+          meta: { title: "表单", icon: "form" }
         }
       ]
     },
