@@ -8,13 +8,41 @@
       <el-form-item label="任务名称">
         <el-input v-model="form.name" />
       </el-form-item>
-      <el-form-item label="Activity zone">
+      <el-form-item label="任务组">
+        <el-input v-model="form.name" />
+      </el-form-item>
+
+      <el-form-item label="任务类型">
         <el-select
           v-model="form.region"
-          placeholder="please select your zone"
+          placeholder="请选择执内容"
+        > 
+          <el-option
+            label="JAR"
+            value="shanghai"
+          />
+          <el-option
+            label="URL"
+            value="beijing"
+          />
+        </el-select>
+      </el-form-item>
+
+      <el-form-item label="上传文件">
+        <el-input v-model="form.name" />
+      </el-form-item>
+
+      <el-form-item label="url地址">
+        <el-input v-model="form.name" />
+      </el-form-item>
+
+      <el-form-item label="JDK">
+        <el-select
+          v-model="form.region"
+          placeholder="暂不支持jdk8以上版本"
         >
           <el-option
-            label="Zone one"
+            label="JDK8"
             value="shanghai"
           />
           <el-option
@@ -23,7 +51,30 @@
           />
         </el-select>
       </el-form-item>
-      <el-form-item label="Activity time">
+      <el-form-item label="执行策略">
+        <el-select
+          v-model="form.region"
+          placeholder="请选择执行策略"
+        >
+          <el-option
+            label="手动执行"
+            value="shanghai"
+          />
+          <el-option
+            label="定时任务"
+            value="beijing"
+          />
+          <el-option
+            label="循环任务"
+            value="beijing"
+          />
+          <el-option
+            label="常驻任务"
+            value="beijing"
+          />
+        </el-select>
+      </el-form-item>
+      <el-form-item label="定时开启">
         <el-col :span="11">
           <el-date-picker
             v-model="form.date1"
@@ -36,7 +87,7 @@
           :span="2"
           class="line"
         >
-          -
+          定时关闭
         </el-col>
         <el-col :span="11">
           <el-time-picker
@@ -49,6 +100,12 @@
       </el-form-item>
       <el-form-item label="Instant delivery">
         <el-switch v-model="form.delivery" />
+      </el-form-item>
+      <el-form-item label="表达式">
+        <el-input v-model="form.name" />
+      </el-form-item>
+      <el-form-item label="参数">
+        <el-input v-model="form.name" />
       </el-form-item>
       <el-form-item label="Activity type">
         <el-checkbox-group v-model="form.type">
@@ -76,7 +133,7 @@
           <el-radio label="Venue" />
         </el-radio-group>
       </el-form-item>
-      <el-form-item label="Activity form">
+      <el-form-item label="任务描述">
         <el-input
           v-model="form.desc"
           type="textarea"
