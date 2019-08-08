@@ -44,25 +44,23 @@ export default new Router({
     {
       path: "/task",
       component: Layout,
-      meta: { title: "任务"},
+      meta: { title: "任务" },
       children: [
         {
           path: "index",
           name: "taskList",
-          component: () =>
-            import( "@/views/task/index.vue"),
+          component: () => import("@/views/task/Index.vue"),
           meta: { title: "任务列表", icon: "table" }
         },
         {
           path: "add",
           name: "taskAdd",
-          component: () =>
-            import("@/views/task/Add.vue"),
+          component: () => import("@/views/task/Add.vue"),
           meta: { title: "任务添加", icon: "form" }
         }
       ]
     },
-   
+
     {
       path: "/form",
       component: Layout,
