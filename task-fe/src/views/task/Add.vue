@@ -17,6 +17,7 @@
 
       <el-form-item label="上传文件" v-if="'JAR' === form.type">
         <el-input v-model="form.file" />
+        <upload @uploaded="setAttributes"></upload>
       </el-form-item>
 
       <el-form-item label="url地址" v-if="'URL' === form.type">
@@ -67,8 +68,12 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-
-@Component
+import Upload from "@/components/common/SingleUpload.vue";
+@Component({
+  components: {
+    Upload
+  }
+})
 export default class add extends Vue {
   private form = {
     name: "",
@@ -99,6 +104,10 @@ export default class add extends Vue {
     if ("URL" === value) {
       this.form.strategy = "quartz";
     }
+  }
+
+  private setAttributes(fileName: string, fileCode: string) {
+    this.form.file = fileName;
   }
 }
 </script>
