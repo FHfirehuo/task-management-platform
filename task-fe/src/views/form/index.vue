@@ -1,26 +1,13 @@
 <template>
   <div class="app-container">
-    <el-form
-      ref="form"
-      :model="form"
-      label-width="120px"
-    >
+    <el-form ref="form" :model="form" label-width="120px">
       <el-form-item label="Activity name">
         <el-input v-model="form.name" />
       </el-form-item>
       <el-form-item label="Activity zone">
-        <el-select
-          v-model="form.region"
-          placeholder="please select your zone"
-        >
-          <el-option
-            label="Zone one"
-            value="shanghai"
-          />
-          <el-option
-            label="Zone two"
-            value="beijing"
-          />
+        <el-select v-model="form.region" placeholder="please select your zone">
+          <el-option label="Zone one" value="shanghai" />
+          <el-option label="Zone two" value="beijing" />
         </el-select>
       </el-form-item>
       <el-form-item label="Activity time">
@@ -32,12 +19,7 @@
             style="width: 100%;"
           />
         </el-col>
-        <el-col
-          :span="2"
-          class="line"
-        >
-          -
-        </el-col>
+        <el-col :span="2" class="line">-</el-col>
         <el-col :span="11">
           <el-time-picker
             v-model="form.date2"
@@ -52,22 +34,10 @@
       </el-form-item>
       <el-form-item label="Activity type">
         <el-checkbox-group v-model="form.type">
-          <el-checkbox
-            label="Online activities"
-            name="type"
-          />
-          <el-checkbox
-            label="Promotion activities"
-            name="type"
-          />
-          <el-checkbox
-            label="Offline activities"
-            name="type"
-          />
-          <el-checkbox
-            label="Simple brand exposure"
-            name="type"
-          />
+          <el-checkbox label="Online activities" name="type" />
+          <el-checkbox label="Promotion activities" name="type" />
+          <el-checkbox label="Offline activities" name="type" />
+          <el-checkbox label="Simple brand exposure" name="type" />
         </el-checkbox-group>
       </el-form-item>
       <el-form-item label="Resources">
@@ -77,51 +47,41 @@
         </el-radio-group>
       </el-form-item>
       <el-form-item label="Activity form">
-        <el-input
-          v-model="form.desc"
-          type="textarea"
-        />
+        <el-input v-model="form.desc" type="textarea" />
       </el-form-item>
       <el-form-item>
-        <el-button
-          type="primary"
-          @click="onSubmit"
-        >
-          Create
-        </el-button>
-        <el-button @click="onCancel">
-          Cancel
-        </el-button>
+        <el-button type="primary" @click="onSubmit">Create</el-button>
+        <el-button @click="onCancel">Cancel</el-button>
       </el-form-item>
     </el-form>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class Form extends Vue {
   private form = {
-    name: '',
-    region: '',
-    date1: '',
-    date2: '',
+    name: "",
+    region: "",
+    date1: "",
+    date2: "",
     delivery: false,
     type: [],
-    resource: '',
-    desc: ''
+    resource: "",
+    desc: ""
   };
 
   private onSubmit() {
-    this.$message('submit!')
+    this.$message("submit!");
   }
 
   private onCancel() {
     this.$message({
-      message: 'cancel!',
-      type: 'warning'
-    })
+      message: "cancel!",
+      type: "warning"
+    });
   }
 }
 </script>

@@ -34,38 +34,32 @@ export default new Router({
       children: [
         {
           path: "dashboard",
-          component: () =>
-            import(
-              /* webpackChunkName: "dashboard" */ "@/views/dashboard/index.vue"
-            )
+          component: () => import("@/views/dashboard/index.vue")
         }
       ]
     },
     {
-      path: "/example",
+      path: "/task",
       component: Layout,
-      redirect: "/example/table",
-      name: "example",
-      meta: { title: "用例", icon: "example" },
+      meta: { title: "任务" },
       children: [
         {
-          path: "table",
-          name: "Table",
-          component: () =>
-            import(/* webpackChunkName: "table" */ "@/views/table/index.vue"),
-          meta: { title: "列表", icon: "table" }
+          path: "index",
+          name: "taskList",
+          component: () => import("@/views/task/Index.vue"),
+          meta: { title: "任务列表", icon: "table" }
         },
         {
-          path: "tree",
-          name: "Tree",
-          component: () =>
-            import(/* webpackChunkName: "tree" */ "@/views/tree/index.vue"),
-          meta: { title: "树", icon: "tree" }
+          path: "add",
+          name: "taskAdd",
+          component: () => import("@/views/task/Add.vue"),
+          meta: { title: "任务添加", icon: "form" }
         }
       ]
     },
+
     {
-      path: "/task-add",
+      path: "/form",
       component: Layout,
       children: [
         {
@@ -73,20 +67,7 @@ export default new Router({
           name: "add",
           component: () =>
             import(/* webpackChunkName: "form" */ "@/views/form/index.vue"),
-          meta: { title: "任务添加", icon: "form" }
-        }
-      ]
-    },
-    {
-      path: "/task-list",
-      component: Layout,
-      children: [
-        {
-          path: "index",
-          name: "list",
-          component: () =>
-            import(/* webpackChunkName: "form" */ "@/views/table/index.vue"),
-          meta: { title: "任务列表", icon: "table" }
+          meta: { title: "表单", icon: "form" }
         }
       ]
     },
