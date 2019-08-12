@@ -10,6 +10,7 @@ const siderDatas = [
     "事件管理"
 ];
 
+<<<<<<< HEAD
 const jdkVersions = [
     'JDK5',
     'JDK6',
@@ -21,3 +22,6 @@ const jdkVersions = [
 
 
 export {siderDatas, jdkVersions};
+=======
+export {siderDatas};
+>>>>>>> 4f5533f434f731ac369a4386aa110ce6e7c9b17e
