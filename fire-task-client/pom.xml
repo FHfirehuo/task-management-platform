@@ -22,10 +22,10 @@
 		</profile>
 	</profiles>
 
-	<name>FireResult</name>
-	<description>define some class for body of http response</description>
+	<name>FireTaskClient</name>
+	<description>任务平台客户端:各个任务依赖于此包：任务通过此包和agent进行交互</description>
 	<url>https://github.com/FHfirehuo/task-management-platform</url>
-
+	
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>

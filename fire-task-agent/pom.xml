@@ -5,6 +5,7 @@
 	<groupId>io.github.FHfirehuo</groupId>
 	<artifactId>fire-task-agent</artifactId>
 	<version>0.0.1</version>
+	<description>任务代理层:部署到各个任务执行服务器上:是真正的任务执行方:是各个任务和服务平台的桥梁</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
