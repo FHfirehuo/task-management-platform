@@ -1,0 +1,14 @@
+server:
+  port: 8761
+  
+spring:
+  profiles:
+    active: test
+  application:
+    name: RegistrationCenter
+
+logging:
+  level:
+    root: info
+  file: /opt/logs/registration-center/log.log
+  path: /opt/logs/registration-center/
