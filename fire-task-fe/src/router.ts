@@ -41,7 +41,7 @@ export default new Router({
     {
       path: "/task",
       component: Layout,
-      meta: { title: "任务" },
+      meta: { title: "任务", icon: "table" },
       children: [
         {
           path: "index",
@@ -58,6 +58,33 @@ export default new Router({
       ]
     },
 
+    {
+      path: "/server",
+      component: Layout,
+      children: [
+        {
+          path: "index",
+          name: "server",
+          component: () =>
+            import(/* webpackChunkName: "form" */ "@/views/form/index.vue"),
+          meta: { title: "服务器", icon: "form" }
+        }
+      ]
+    },
+
+    {
+      path: "/instructions",
+      component: Layout,
+      children: [
+        {
+          path: "index",
+          name: "instructions",
+          component: () =>
+            import(/* webpackChunkName: "form" */ "@/views/form/index.vue"),
+          meta: { title: "使用说明", icon: "form" }
+        }
+      ]
+    },
     {
       path: "/form",
       component: Layout,

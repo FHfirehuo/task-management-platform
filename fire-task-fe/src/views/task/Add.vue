@@ -112,7 +112,7 @@ export default class add extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .line {
   text-align: center;
 }
